@@ -1,0 +1,33 @@
+<hello name="{{ name }}"></hello>
+<p>
+ 
+Please upload csv file to view the issue details
+</p>
+
+<input type="file" name="files" class="form-control" 
+                     #uploads  (change)="onChange(uploads.files)" multiple
+                     value="process"/>
+
+<div>
+  <table border="">
+    <thead>
+       <tr>
+            <td> First name</td>
+            <td> Sur Name</td>
+            <td> Issue Count</td>
+            <td> Date of Birth </td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let record of dataList">
+            <td> {{record.First_name}} </td>
+            <td> {{record.Sur_name}} </td>
+            <td> {{record.Issue_count}} </td>
+            <td> {{record.Date_of_birth}} </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
